@@ -66,6 +66,6 @@ if (isServer) then {[_impactEmitter, _maxKillRange, _maxDamageRange] spawn tts_b
 // impact post processing effects
 [] spawn tts_beam_fnc_postProcessEffects;
 
-sleep 10;
+sleep 30;
 
 deleteVehicle _impactEmitter;
