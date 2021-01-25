@@ -1,0 +1,14 @@
+class CfgFunctions
+{
+	#include "scripts\tts_beam\cfgFunctions.hpp"
+};
+
+class CfgSounds {
+	sounds[] = {};
+	#include "scripts\tts_beam\cfgSounds.hpp"
+};
+
+//Debug console
+enableDebugConsole[] = {
+	"76561198272381832"		//TheTimidShade
+};
