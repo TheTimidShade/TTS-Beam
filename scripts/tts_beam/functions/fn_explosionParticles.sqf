@@ -12,6 +12,8 @@
 		NONE
 */
 
+if (!hasInterface) exitWith {}; // dedicated server & HC should not run particles
+
 params ["_impactEmitter", "_col"];
 
 // dust wave

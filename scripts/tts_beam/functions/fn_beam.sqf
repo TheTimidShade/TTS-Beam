@@ -64,7 +64,7 @@ if (isServer) then {[_impactEmitter, _maxKillRange, _maxDamageRange] spawn tts_b
 [_impactEmitter, _debrisColour] spawn tts_beam_fnc_explosionParticles;
 
 // impact post processing effects
-[] spawn tts_beam_fnc_postProcessEffects;
+[_target] spawn tts_beam_fnc_postProcessEffects;
 
 sleep 30;
 

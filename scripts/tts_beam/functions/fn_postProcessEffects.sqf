@@ -5,11 +5,16 @@
 		Handles post processing effects for beam impact.
 
 	Parameters:
-		NONE
+		0: OBJECT - Beam target object, used to determine if player is close enough to need ppeffects
 		
 	Returns:
 		NONE
 */
+
+params ["_target"];
+
+if (!hasInterface) exitWith {}; // dedicated server & HC do not need to run post process effects
+if (player distance _target > 1000) exitWith {}; // don't play ppeffects if player is far away
 
 // blur
 [] spawn {		

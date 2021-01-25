@@ -13,6 +13,8 @@
 		NONE
 */
 
+if (!isServer) exitWith {}; // make sure this function is only run on server
+
 params ["_impactEmitter","_maxKillRange", "_maxDamageRange"];
 
 private _ace_enabled = isClass(configFile >> "CfgPatches" >> "ace_main");
