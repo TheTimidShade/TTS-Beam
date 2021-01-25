@@ -1,8 +1,8 @@
 # Beam Script
 Beam script for Arma 3, which calls down a laser strike on the desired object/position.
 
-Demo Video: https://www.youtube.com/watch?v=OPNlwLIzreI&ab_channel=TheTimidShade
-Steam Workshop page: https://steamcommunity.com/sharedfiles/filedetails/?id=2373483475
+Demo Video: https://www.youtube.com/watch?v=OPNlwLIzreI&ab_channel=TheTimidShade  
+Steam Workshop page: https://steamcommunity.com/sharedfiles/filedetails/?id=2373483475  
 
 Steps for usage:
 1. Merge scripts folder with existing scripts folder in mission folder (if it exists).
