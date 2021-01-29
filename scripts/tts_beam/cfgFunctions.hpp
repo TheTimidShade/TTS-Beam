@@ -9,5 +9,6 @@ class tts_beam
 		class explosionDamage {};
 		class explosionParticles {};
 		class postProcessEffects {};
+		class customZeusModules {};
 	};
 };

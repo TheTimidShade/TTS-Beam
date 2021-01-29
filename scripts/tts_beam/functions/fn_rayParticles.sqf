@@ -37,7 +37,8 @@ _lightp setLightAmbient _col;
 _lightp setLightColor _col;
 _lightp lightAttachObject [_beamEmitter, [20,20,200]];
 
-waitUntil {sleep 0.01; _beamEmitter distance _targetPos < 5 || (getPosATL _beamEmitter)#2 < 5};
+sleep 1; // sleep to let beamEmitter accelerate first
+waitUntil {sleep 0.01; vectorMagnitude (velocity _beamEmitter) < 20 || _beamEmitter distance _targetPos < 5 || (getPosATL _beamEmitter)#2 < 5};
 
 sleep 0.1; // small sleep to let dust cloud get created to hide deletion of beam
 
