@@ -5,8 +5,8 @@ Now compatible with Achilles/Zeus Enhanced, which allows you to activate the scr
 
 Demo Video: https://www.youtube.com/watch?v=OPNlwLIzreI&ab_channel=TheTimidShade  
 Steam Workshop page: https://steamcommunity.com/sharedfiles/filedetails/?id=2373483475  
-Achilles: https://steamcommunity.com/sharedfiles/filedetails/?id=723217262
-Zeus Enhanced: https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631
+Achilles: https://steamcommunity.com/sharedfiles/filedetails/?id=723217262  
+Zeus Enhanced: https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631  
 
 Steps for usage:
 1. Merge scripts folder with existing scripts folder in mission folder (if it exists).
