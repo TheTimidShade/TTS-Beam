@@ -11,8 +11,9 @@
 		NONE
 */
 
-sleep 1;
-if (!isNull (getAssignedCuratorLogic player) && {isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")}) then {
+waitUntil {sleep 1; !isNull player && time > 5 && (!isNull getAssignedCuratorLogic player)};
+
+if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then {
 	["Fire Support", "Beam Laser Strike", 
 	{
 		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
@@ -56,7 +57,7 @@ if (!isNull (getAssignedCuratorLogic player) && {isClass (configFile >> "CfgPatc
 	}] call Ares_fnc_RegisterCustomModule;
 };
 
-if (!isNull (getAssignedCuratorLogic player) && {isClass (configFile >> "CfgPatches" >> "zen_main")}) then {
+if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 	["Fire Support", "Beam Laser Strike",
 	{
 		params [["_position", [0,0,0], [[]], 3], ["_attachedObject", objNull, [objNull]]];

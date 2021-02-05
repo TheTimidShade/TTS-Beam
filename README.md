@@ -34,6 +34,9 @@ Code example:
 ```
 
 ## Changelog
+### 05/02/2021
+- Adjusted fn_customZeusModules slightly so it should correctly add the modules more reliably.
+
 ### 29/01/2021
 - Added compatibility for Achilles and Zeus Enhanced. The 'Beam Laser Strike' module can be found under the 'Fire Support' section when either of these mods are loaded and the script is present in the mission file. 
   
