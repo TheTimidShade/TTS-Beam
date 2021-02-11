@@ -34,6 +34,11 @@ Code example:
 ```
 
 ## Changelog
+Read below for complete changelog history.
+
+### 05/02/2021
+- Tweaked fn_customZeusModules again since it still seemed to be causing a few issues adding modules.
+
 ### 05/02/2021
 - Adjusted fn_customZeusModules slightly so it should correctly add the modules more reliably.
 

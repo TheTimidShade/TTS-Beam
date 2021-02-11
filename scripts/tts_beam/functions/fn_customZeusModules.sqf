@@ -11,7 +11,7 @@
 		NONE
 */
 
-waitUntil {sleep 1; !isNull player && time > 5 && (!isNull getAssignedCuratorLogic player)};
+waitUntil {player == player && !isNull getAssignedCuratorLogic player};
 
 if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then {
 	["Fire Support", "Beam Laser Strike", 
