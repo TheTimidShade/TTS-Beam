@@ -10,12 +10,11 @@ Zeus Enhanced: https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631
 
 Steps for usage:
 1. Merge scripts folder with existing scripts folder in mission folder (if it exists).
-2. Merge `description.ext` and `initPlayerLocal.sqf` (`initPlayerLocal.sqf` is only necessary if you want to use the beam strike module).
+2. Merge `description.ext`.
 3. Execute `tts_beam_fnc_beam` with the object you want the strike to land on as the first parameter, or place down the module in Zeus to call down a strike above that position.
 
 **IMPORTANT**  
 `tts_beam_fnc_beam` needs to be executed on all connected clients AND the server to work correctly in multiplayer. You can do this using triggers or via remoteExec.  
-If the module does not appear in the Zeus modules list even after adding `[] spawn tts_beam_fnc_customZeusModules` to `initPlayerLocal.sqf`, you can attempt to re-add it by executing `[] spawn tts_beam_fnc_customZeusModules` from debug console or by using the Achilles/ZEN execute code module.
 
 Trigger example (trigger must NOT be server only):
 ```sqf
@@ -35,6 +34,10 @@ Code example:
 
 ## Changelog
 Read below for complete changelog history.
+
+### 13/02/2021
+- Removed need for tts_beam_fnc_customZeusModules to be run from initPlayerLocal.
+- Updated sound classes to use tts prefix.
 
 ### 05/02/2021
 - Tweaked fn_customZeusModules again since it still seemed to be causing a few issues adding modules.

@@ -11,7 +11,9 @@
 		NONE
 */
 
-waitUntil {player == player && !isNull getAssignedCuratorLogic player};
+[] spawn {
+
+waitUntil {sleep 1; !isNull player && time > 5 && (!isNull getAssignedCuratorLogic player)};
 
 if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then {
 	["Fire Support", "Beam Laser Strike", 
@@ -113,3 +115,4 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 	}] call zen_custom_modules_fnc_register
 };
 
+};

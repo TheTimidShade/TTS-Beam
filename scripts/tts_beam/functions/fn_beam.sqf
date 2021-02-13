@@ -50,11 +50,11 @@ _flash spawn {sleep 0.1; deleteVehicle _this;};
 
 // wait until the beam is almost halfway and play laser sound
 waitUntil {sleep 0.01; ((getPosATL _beamEmitter)#2 < 750)};
-_impactEmitter say3D ["laser", 20000, 1, false];
+_impactEmitter say3D ["tts_laser", 20000, 1, false];
 
 // wait until touching ground/near target
 waitUntil {sleep 0.01; vectorMagnitude (velocity _beamEmitter) < 20 || _beamEmitter distance _targetPos < 5 || (getPosATL _beamEmitter)#2 < 5};
-_impactEmitter say3D ["laser_impact", 20000, 1, false];
+_impactEmitter say3D ["tts_laser_impact", 20000, 1, false];
 _impactEmitter setPosATL (getPosATL _beamEmitter);
 deleteVehicle _beamEmitter;
 
