@@ -15,6 +15,7 @@
 
 waitUntil {sleep 1; !isNull player && time > 5 && (!isNull getAssignedCuratorLogic player)};
 
+/* DEPRECATED ACHILLES MODULE
 if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then {
 	["Fire Support", "Beam Laser Strike", 
 	{
@@ -57,7 +58,7 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then 
 		_beamTarget spawn {sleep 60; deleteVehicle _this;}; // wait and cleanup target pos
 
 	}] call Ares_fnc_RegisterCustomModule;
-};
+};*/
 
 if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 	["Fire Support", "Beam Laser Strike",

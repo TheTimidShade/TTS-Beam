@@ -1,11 +1,10 @@
 # Beam Script
 Beam script for Arma 3, which calls down a laser strike on the desired object/position.
 
-Now compatible with Achilles/Zeus Enhanced, which allows you to activate the script using a custom module. You will not be able to use this module from Zeus unless one of either Achilles or Zeus Enhanced is loaded.
+Now compatible with Zeus Enhanced, which allows you to activate the script using a custom module. You will not be able to use this module from Zeus unless Zeus Enhanced is loaded.
 
 Demo Video: https://www.youtube.com/watch?v=OPNlwLIzreI&ab_channel=TheTimidShade  
 Steam Workshop page: https://steamcommunity.com/sharedfiles/filedetails/?id=2373483475  
-Achilles: https://steamcommunity.com/sharedfiles/filedetails/?id=723217262  
 Zeus Enhanced: https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631  
 
 Steps for usage:
@@ -34,6 +33,9 @@ Code example:
 
 ## Changelog
 Read below for complete changelog history.
+
+### 12/04/2021
+- Removed Achilles compatibility (no longer supported).
 
 ### 13/02/2021
 - Removed need for tts_beam_fnc_customZeusModules to be run from initPlayerLocal.
