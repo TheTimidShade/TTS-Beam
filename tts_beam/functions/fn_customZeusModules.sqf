@@ -74,7 +74,7 @@
 					_beamTarget spawn {sleep 60; deleteVehicle _this;}; // wait and cleanup target pos
 				}, {}, [_position] // args
 			] call zen_dialog_fnc_create;
-		}] call zen_custom_modules_fnc_register
+		}, "tts_beam\icons\beam_strike.paa"] call zen_custom_modules_fnc_register
 	};
 };
 

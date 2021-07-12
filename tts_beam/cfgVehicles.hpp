@@ -32,6 +32,7 @@ class CfgVehicles {
 		isGlobal = 1; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
 		isTriggerActivated = 1;
 		displayName = "Beam Laser Strike";
+		icon = "tts_beam\icons\beam_strike.paa"
 		category = "tts_beam_modules";
 		function = "tts_beam_fnc_moduleBeamStrike";
 		
