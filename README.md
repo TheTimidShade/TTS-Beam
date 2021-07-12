@@ -34,6 +34,9 @@ Code example:
 ## Changelog
 Read below for complete changelog history.
 
+### 12/07/2021
+- Added parameter to script to enable/disable beam damage.
+
 ### 12/04/2021
 - Removed Achilles compatibility (no longer supported).
 
