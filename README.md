@@ -35,6 +35,7 @@ Code example:
 Read below for complete changelog history.
 
 ### 12/07/2021
+- Added custom icon to beam strike module.
 - Added parameter to script to enable/disable beam damage.
 
 ### 12/04/2021
