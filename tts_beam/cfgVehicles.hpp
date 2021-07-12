@@ -48,6 +48,12 @@ class CfgVehicles {
 				tooltip = "Colour of dust kicked up by laser impact.";
 				defaultValue = "[0.3, 0.27, 0.15]";
 			};
+			class beamDamage : Checkbox {
+				property = "tts_beam_moduleBeamStrike_beamDamage";
+				displayName = "Disable Beam Damage";
+				tooltip = "If checked, beam will not damage units or destroy objects.";
+				defaultValue = "0";
+			};
 		};
 	};
 	

@@ -2,7 +2,7 @@
 	Author: TheTimidShade
 
 	Description:
-		Initialises custom modules for Achilles & ZEN if enabled
+		Initialises custom modules for ZEN if enabled
 
 	Parameters:
 		NONE
@@ -13,50 +13,6 @@
 
 [] spawn {
 	waitUntil {player == player && !isNull getAssignedCuratorLogic player};
-
-	if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then {
-		["Fire Support", "Beam Laser Strike", 
-		{
-			params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-			private _dialogResult = [
-				"Beam Laser Strike",
-				[
-					["Beam Colour", ["Default", "Red", "Orange", "Yellow", "Green", "Cyan", "Pink", "Purple"], 0],
-					["Debris Colour", ["Default", "Mud", "Snow", "Sand"], 0]
-				]
-			] call Ares_fnc_showChooseDialog;
-
-			if (_dialogResult isEqualTo []) exitWith{}; // if dialog was closed exit
-
-			private _beamColour = [1,0.6,0.2];
-			switch (_dialogResult#0) do { // select beam colour
-				case 0: {_beamColour = [1,0.6,0.2];}; 		// default
-				case 1: {_beamColour = [0.5,0,0];}; 		// red
-				case 2: {_beamColour = [0.3,0.15,0.1];}; 	// orange
-				case 3: {_beamColour = [1,0.9,0];}; 		// yellow
-				case 4: {_beamColour = [0,0.5,0];};			// green
-				case 5: {_beamColour = [0,0.5,0.5];}; 		// cyan
-				case 6: {_beamColour = [1,0,0.6];}; 		// pink
-				case 7: {_beamColour = [0.5,0,1];}; 		// purple
-			};
-			
-			private _debrisColour = [0.3, 0.27, 0.15]; 
-			switch (_dialogResult#1) do { // select debris colour
-				case 0: {_debrisColour = [0.3, 0.27, 0.15];}; 	// default
-				case 1: {_debrisColour = [0.15, 0.11, 0.08];}; 	// mud
-				case 2: {_debrisColour = [1, 1, 1];}; 			// snow
-				case 3: {_debrisColour = [1, 0.8, 0.3];}; 		// sand
-			};
-
-			private _beamTarget = "Land_HelipadEmpty_F" createVehicle _position;
-
-			[_beamTarget, _beamColour, _debrisColour] remoteExec ["tts_beam_fnc_beam", 0, false]; // fire beam
-
-			_beamTarget spawn {sleep 60; deleteVehicle _this;}; // wait and cleanup target pos
-
-		}] call Ares_fnc_RegisterCustomModule;
-	};
 
 	if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 		["Fire Support", "Beam Laser Strike",
@@ -78,6 +34,11 @@
 							["Default", "Mud", "Snow", "Sand"], // return values
 							["Default", "Mud", "Snow", "Sand"], // labels
 							0 // element 0 is default selected
+						]
+					],
+					["CHECKBOX", ["Disable Beam Damage", "If checked, beam will not damage units or destroy objects"],
+						[ // control args
+							false // default state
 						]
 					]
 				],
@@ -104,9 +65,11 @@
 						case "Sand": {_debrisColour = [1, 0.8, 0.3];}; 			// sand
 					};
 
+					private _isLethal = if (_dialogResult#2) then {false} else {true};
+
 					private _beamTarget = "Land_HelipadEmpty_F" createVehicle _args#0;
 
-					[_beamTarget, _beamColour, _debrisColour] remoteExec ["tts_beam_fnc_beam", 0, false]; // fire beam
+					[_beamTarget, _beamColour, _debrisColour, _isLethal] remoteExec ["tts_beam_fnc_beam", 0, false]; // fire beam
 
 					_beamTarget spawn {sleep 60; deleteVehicle _this;}; // wait and cleanup target pos
 				}, {}, [_position] // args
