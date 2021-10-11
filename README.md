@@ -1,6 +1,3 @@
-# Beam Script (Mod Version)
-Source code for mod version of my Beam Script.
-
 ## Changelog
 Read below for complete changelog history.
 
@@ -8,6 +5,7 @@ Read below for complete changelog history.
 - Added compatibility for upcoming AIO mod.
 
 ### 12/07/2021
+Applied changes from script version:
 - Removed redundant Achilles code.
 - Added paramater to script/modules to enable/disable damage from the beam.
 - Added icon for beam strike module.
