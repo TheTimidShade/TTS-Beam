@@ -3,7 +3,7 @@ Beam Laser script for Arma 3, which calls down a laser strike on the desired obj
 
 A [mod version](https://steamcommunity.com/sharedfiles/filedetails/?id=2393517275) is also available on the Steam Workshop.
 
-**FEATURES:**
+### **FEATURES:**
 - Customisable beam/debris colour
 - Damages/destroys nearby units, vehicles and buildings
 - Nearby units can be knocked down by the blast wave
@@ -16,8 +16,9 @@ A [mod version](https://steamcommunity.com/sharedfiles/filedetails/?id=239351727
 
 You can see the script in action in this [demo video](https://www.youtube.com/watch?v=OPNlwLIzreI) or try out the [demo mission](https://steamcommunity.com/sharedfiles/filedetails/?id=2373483475) yourself.
 
+___
 
-**INTALLATION INSTRUCTIONS:**
+### **INTALLATION INSTRUCTIONS:**
 1. Download the script files via the green 'Code' button in the top right. Extract the ZIP file somewhere easily accessible.
 2. Open your mission folder. You can do this from the 3den Editor using (Scenario > Open Scenario Folder).
 3. Copy the 'scripts' folder into your mission folder.
@@ -50,7 +51,9 @@ class CfgFunctions
 
 5. Done! You can now trigger a beam strike using `tts_beam_fnc_beam` with the object you want the strike to land on as the first parameter (see below for examples). If you would rather use Zeus Enhanced, you can use the Zeus module instead.
 
-**EXAMPLES:**  
+___
+
+### **EXAMPLES:**  
 `tts_beam_fnc_beam` **needs to be executed on all connected clients AND the server to work correctly in multiplayer.** You can do this using triggers or via remoteExec.  
 
 Trigger example (trigger must NOT be server only):
