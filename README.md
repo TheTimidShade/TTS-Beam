@@ -18,10 +18,10 @@ You can see the script in action in this [demo video](https://www.youtube.com/wa
 
 
 **INTALLATION INSTRUCTIONS:**
-
-1. Open your mission folder. You can do this from the 3den Editor using (Scenario > Open Scenario Folder).
-2. Copy the 'scripts' folder into your mission folder.
-3. If you do not already have a `description.ext` file in your mission, copy it into your mission folder. If you already have one, you will need to copy the contents of my `description.ext` into yours. Any 'CfgSomething' classes need to be merged together into one.
+1. Download the script files via the green 'Code' button in the top right. Extract the ZIP file somewhere easily accessible.
+2. Open your mission folder. You can do this from the 3den Editor using (Scenario > Open Scenario Folder).
+3. Copy the 'scripts' folder into your mission folder.
+4. If you do not already have a `description.ext` file in your mission, copy it into your mission folder. If you already have one, copy the contents of my `description.ext` into yours. Any 'CfgSomething' classes need to be merged together into one.
 e.g.
 ```cpp
 // from TTS Cloak
@@ -48,7 +48,7 @@ class CfgFunctions
 }
 ```
 
-4. Done! You can now trigger a beam strike using `tts_beam_fnc_beam` with the object you want the strike to land on as the first parameter (see below for examples). If you would rather use Zeus Enhanced, you can use the Zeus module instead.
+5. Done! You can now trigger a beam strike using `tts_beam_fnc_beam` with the object you want the strike to land on as the first parameter (see below for examples). If you would rather use Zeus Enhanced, you can use the Zeus module instead.
 
 **EXAMPLES:**  
 `tts_beam_fnc_beam` **needs to be executed on all connected clients AND the server to work correctly in multiplayer.** You can do this using triggers or via remoteExec.  
