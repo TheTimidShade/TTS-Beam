@@ -17,28 +17,28 @@ if (isClass(configFile >> "CfgPatches" >> "tts_effects_aio") && {missionNamespac
 	waitUntil {player == player && !isNull getAssignedCuratorLogic player};
 
 	if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
-		["Fire Support", "Beam Laser Strike",
+		["Fire Support", "STR_tts_beam_moduleBeamStrike_title",
 		{
 			params [["_position", [0,0,0], [[]], 3], ["_attachedObject", objNull, [objNull]]];
 
 			[
-				"Beam Laser Strike", // title
+				"STR_tts_beam_moduleBeamStrike_title", // title
 				[ // array of controls for dialog
-					["COMBO", ["Beam Colour", "Colour of laser particles and glow"],
+					["COMBO", ["STR_tts_beam_moduleBeamStrike_beamColour", "STR_tts_beam_moduleBeamStrike_beamColour_desc"],
 						[ // control args
 							["Default", "Red", "Orange", "Yellow", "Green", "Cyan", "Pink", "Purple"], // return values
-							["Default", "Red", "Orange", "Yellow", "Green", "Cyan", "Pink", "Purple"], // labels
+							["STR_tts_beam_default", "STR_tts_beam_moduleBeamStrike_beamColour_red", "STR_tts_beam_moduleBeamStrike_beamColour_orange", "STR_tts_beam_moduleBeamStrike_beamColour_yellow", "STR_tts_beam_moduleBeamStrike_beamColour_green", "STR_tts_beam_moduleBeamStrike_beamColour_cyan", "STR_tts_beam_moduleBeamStrike_beamColour_pink", "STR_tts_beam_moduleBeamStrike_beamColour_purple"], // labels
 							0 // element 0 is default selected
 						]
 					],
-					["COMBO", ["Debris Colour", "Colour of dust kicked up by explosion"],
+					["COMBO", ["STR_tts_beam_moduleBeamStrike_debrisColour", "STR_tts_beam_moduleBeamStrike_debrisColour_desc"],
 						[ // control args
 							["Default", "Mud", "Snow", "Sand"], // return values
-							["Default", "Mud", "Snow", "Sand"], // labels
+							["STR_tts_beam_default", "STR_tts_beam_moduleBeamStrike_debrisColour_mud", "STR_tts_beam_moduleBeamStrike_debrisColour_snow", "STR_tts_beam_moduleBeamStrike_debrisColour_sand"], // labels
 							0 // element 0 is default selected
 						]
 					],
-					["CHECKBOX", ["Disable Beam Damage", "If checked, beam will not damage units or destroy objects"],
+					["CHECKBOX", ["STR_tts_beam_moduleBeamStrike_disableBeamDamage", "STR_tts_beam_moduleBeamStrike_disableBeamDamage_desc"],
 						[ // control args
 							false // default state
 						]
@@ -76,7 +76,7 @@ if (isClass(configFile >> "CfgPatches" >> "tts_effects_aio") && {missionNamespac
 					_beamTarget spawn {sleep 60; deleteVehicle _this;}; // wait and cleanup target pos
 				}, {}, [_position] // args
 			] call zen_dialog_fnc_create;
-		}, "tts_beam\icons\beam_strike.paa"] call zen_custom_modules_fnc_register
+		}, "scripts\tts_beam\icons\beam_strike.paa"] call zen_custom_modules_fnc_register
 	};
 };
 

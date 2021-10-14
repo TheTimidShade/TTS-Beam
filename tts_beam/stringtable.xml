@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="TTS Beam">
+    <Package name="General">
+        <Key ID="STR_tts_beam_default">
+            <Original>Default</Original>
+            <English>Default</English>
+        </Key>
+    </Package >
+	<Package name="Modules">
+		<Container name="Beam Strike Module">	
+            <Key ID="STR_tts_beam_moduleBeamStrike_title">
+				<Original>Beam Laser Strike</Original>
+				<English>Beam Laser Strike</English>
+			</Key>
+            <Container name="Beam colour param">
+                <Key ID="STR_tts_beam_moduleBeamStrike_beamColour">
+                    <Original>Beam colour</Original>
+                    <English>Beam colour</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_beamColour_desc">
+                    <Original>Colour of laser beam</Original>
+                    <English>Colour of laser beam</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_beamColour_red">
+                    <Original>Red</Original>
+                    <English>Red</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_beamColour_orange">
+                    <Original>Orange</Original>
+                    <English>Orange</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_beamColour_yellow">
+                    <Original>Yellow</Original>
+                    <English>Yellow</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_beamColour_green">
+                    <Original>Green</Original>
+                    <English>Green</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_beamColour_cyan">
+                    <Original>Cyan</Original>
+                    <English>Cyan</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_beamColour_pink">
+                    <Original>Pink</Original>
+                    <English>Pink</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_beamColour_purple">
+                    <Original>Purple</Original>
+                    <English>Purple</English>
+                </Key>
+            </Container>
+            <Container name="Debris colour param">
+                <Key ID="STR_tts_beam_moduleBeamStrike_debrisColour">
+                    <Original>Debris colour</Original>
+                    <English>Debris colour</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_debrisColour_desc">
+                    <Original>Colour of dust kicked up by explosion</Original>
+                    <English>Colour of dust kicked up by explosion</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_debrisColour_mud">
+                    <Original>Mud</Original>
+                    <English>Mud</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_debrisColour_snow">
+                    <Original>Snow</Original>
+                    <English>Snow</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_debrisColour_sand">
+                    <Original>Sand</Original>
+                    <English>Sand</English>
+                </Key>
+            </Container>
+            <Container name="Disable beam damage">
+                <Key ID="STR_tts_beam_moduleBeamStrike_disableBeamDamage">
+                    <Original>Disable beam damage</Original>
+                    <English>Disable beam damage</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_disableBeamDamage_desc">
+                    <Original>If checked, beam will not damage units or destroy objects</Original>
+                    <English>If checked, beam will not damage units or destroy objects</English>
+                </Key>
+            </Container>
+        </Container>
+	</Package>
+</Project>
