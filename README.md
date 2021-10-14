@@ -48,8 +48,8 @@ class CfgFunctions
     #include "scripts\tts_beam\cfgFunctions.hpp"
 }
 ```
-
-5. Done! You can now trigger a beam strike using `tts_beam_fnc_beam` with the object you want the strike to land on as the first parameter (see below for examples). If you would rather use Zeus Enhanced, you can use the Zeus module instead.
+5. If you do not already have a `stringtable.xml` file in your mission, copy it into your mission folder. If you already have one, copy everything EXCEPT THE FIRST LINE from my `stringtable.xml` into yours.
+6. Done! You can now trigger a beam strike using `tts_beam_fnc_beam` with the object you want the strike to land on as the first parameter (see below for examples). If you would rather use Zeus Enhanced, you can use the Zeus module instead.
 
 ___
 
@@ -75,6 +75,9 @@ ___
 
 ## Changelog
 Read below for complete changelog history.
+
+### 14/10/2021
+- Added stringtable support to allow the script to be translated. If you are willing to help translate the script into another language, contact me in my Discord!
 
 ### 11/10/2021
 - Cleaned up README file and improved installation instructions.
