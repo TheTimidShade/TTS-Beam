@@ -21,6 +21,8 @@ private _ace_enabled = isClass(configFile >> "CfgPatches" >> "ace_main");
 
 _nearObjects = nearestObjects[_impactEmitter, ["Building", "House", "Man", "LandVehicle", "Air"], _maxDamageRange];
 {
+	if (typeOf _x == "Land_HelipadEmpty_F") then {continue}; // ignore helipads since we use those for sounds
+	
 	private _distance = _impactEmitter distance _x;
 	private _dirFromTo = (getPosATL _impactEmitter) vectorFromTo (getPosATL _x);
 	

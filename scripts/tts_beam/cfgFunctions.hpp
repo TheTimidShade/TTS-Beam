@@ -4,13 +4,19 @@ class tts_beam
 	{
 		file = "scripts\tts_beam\functions";
 		class beam {};
+		class orbitalBombardment {};
 		class rayParticles {};
 		class ragdollUnit {};
 		class explosionDamage {};
 		class explosionParticles {};
 		class postProcessEffects {};
-		class customZeusModules {
-			preInit = 1; // register zeus modules on mission start
-		};
+		
+	};
+	class zen
+	{
+		file = "scripts\tts_beam\functions\zen";
+		class initCustomModules { preInit = 1; };
+		class zen_moduleBeamStrike {};
+		class zen_moduleOrbitalBombardment {};
 	};
 };

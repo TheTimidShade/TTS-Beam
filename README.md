@@ -58,23 +58,48 @@ ___
 
 Trigger example (trigger must NOT be server only):
 ```sqf
-// beam is called down above object 'beamTarget' with default beam and debris colour
+/*
+	0: OBJECT - The object the beam is created above.
+	1: ARRAY (OPTIONAL) - Colour of the beam in format [r,g,b].
+	2: ARRAY (OPTIONAL) - Colour of dust created on impact in format [r,g,b].
+	3: BOOL (OPTIONAL) - False to disable damage and destruction of beam.
+*/
+
 [beamTarget] spawn tts_beam_fnc_beam; 
 ```
-Trigger example (with optional colour params):
+
+For extra destruction, you can also create a barrage of beam strikes:
 ```sqf
-// beam is called down above object 'beamTarget' with green laser and white debris (snow environment)
-[beamTarget, [0,0.5,0], [1,1,1]] spawn tts_beam_fnc_beam; 
+/*
+    0: OBJECT - Centre of bombardment position.
+	1: ARRAY (OPTIONAL) - Colour of the beam in format [r,g,b].
+	2: ARRAY (OPTIONAL) - Colour of dust created on impact in format [r,g,b].
+	3: BOOL (OPTIONAL) - False to disable damage and destruction of beam.
+	4: NUMBER (OPTIONAL) - Maximum distance from module centre lasers can land
+	5: NUMBER (OPTIONAL) - Number of lasers to fire
+	6: NUMBER (OPTIONAL) - Delay in seconds between beam strikes
+	7: BOOL (OPTIONAL) - Rainbow mode
+*/
+
+// the orbital bombardment should only be triggered from the server
+if (isServer) then 
+{
+	[getPos beamTarget, [1,0.6,0.2], [0.3,0.27,0.15], true, 200, 5, 1, false] spawn tts_beam_fnc_orbitalBombardment; 
+};
 ```
-Code example:
-```sqf
-// make sure if using this method, this code is run only on the server or host client, otherwise there will be duplication
-[beamTarget, [0,0.5,0], [1,1,1]] remoteExec ["tts_beam_fnc_beam", 0, false];
-```
+
 ___
 
 ## Changelog
 Read below for complete changelog history.
+
+### 26/10/2021
+- Removed delay before ZEN module initialisation so modules should appear in Zeus instantly now.
+- Cleaned up ZEN related functions to be more consistent with other TTS scripts.
+- ZEN modules are now under their own category 'TTS Beam Laser' instead of 'Fire Support' so it is easier to find and doesn't clutter up the other fire support options.
+- Fixed an issue that was causing close consecutive beam strikes to destroy the sound emitter from the previous strike.
+- Added 'blue' colour back ZEN module colours list.
+- Added a new function `fn_orbitalBombardment` and a complementary ZEN module because overkill is underrated.
 
 ### 14/10/2021
 - Added stringtable support to allow the script to be translated. If you are willing to help translate the script into another language, contact me in my Discord!
