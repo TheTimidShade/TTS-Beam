@@ -98,7 +98,7 @@ Read below for complete changelog history.
 - Cleaned up ZEN related functions to be more consistent with other TTS scripts.
 - ZEN modules are now under their own category 'TTS Beam Laser' instead of 'Fire Support' so it is easier to find and doesn't clutter up the other fire support options.
 - Fixed an issue that was causing close consecutive beam strikes to destroy the sound emitter from the previous strike.
-- Added 'blue' colour back ZEN module colours list.
+- Added 'blue' colour back in the ZEN module colours list.
 - Added a new function `fn_orbitalBombardment` and a complementary ZEN module because overkill is underrated.
 
 ### 14/10/2021
