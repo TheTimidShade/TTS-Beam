@@ -59,10 +59,10 @@ ___
 Trigger example (trigger must NOT be server only):
 ```sqf
 /*
-	0: OBJECT - The object the beam is created above.
-	1: ARRAY (OPTIONAL) - Colour of the beam in format [r,g,b].
-	2: ARRAY (OPTIONAL) - Colour of dust created on impact in format [r,g,b].
-	3: BOOL (OPTIONAL) - False to disable damage and destruction of beam.
+    0: OBJECT - The object the beam is created above.
+    1: ARRAY (OPTIONAL) - Colour of the beam in format [r,g,b].
+    2: ARRAY (OPTIONAL) - Colour of dust created on impact in format [r,g,b].
+    3: BOOL (OPTIONAL) - False to disable damage and destruction of beam.
 */
 
 [beamTarget] spawn tts_beam_fnc_beam; 
@@ -72,19 +72,19 @@ For extra destruction, you can also create a barrage of beam strikes:
 ```sqf
 /*
     0: OBJECT - Centre of bombardment position.
-	1: ARRAY (OPTIONAL) - Colour of the beam in format [r,g,b].
-	2: ARRAY (OPTIONAL) - Colour of dust created on impact in format [r,g,b].
-	3: BOOL (OPTIONAL) - False to disable damage and destruction of beam.
-	4: NUMBER (OPTIONAL) - Maximum distance from module centre lasers can land
-	5: NUMBER (OPTIONAL) - Number of lasers to fire
-	6: NUMBER (OPTIONAL) - Delay in seconds between beam strikes
-	7: BOOL (OPTIONAL) - Rainbow mode
+    1: ARRAY (OPTIONAL) - Colour of the beam in format [r,g,b].
+    2: ARRAY (OPTIONAL) - Colour of dust created on impact in format [r,g,b].
+    3: BOOL (OPTIONAL) - False to disable damage and destruction of beam.
+    4: NUMBER (OPTIONAL) - Maximum distance from module centre lasers can land
+    5: NUMBER (OPTIONAL) - Number of lasers to fire
+    6: NUMBER (OPTIONAL) - Delay in seconds between beam strikes
+    7: BOOL (OPTIONAL) - Rainbow mode
 */
 
 // the orbital bombardment should only be triggered from the server
 if (isServer) then 
 {
-	[getPos beamTarget, [1,0.6,0.2], [0.3,0.27,0.15], true, 200, 5, 1, false] spawn tts_beam_fnc_orbitalBombardment; 
+    [getPos beamTarget, [1,0.6,0.2], [0.3,0.27,0.15], true, 200, 5, 1, false] spawn tts_beam_fnc_orbitalBombardment; 
 };
 ```
 
