@@ -93,6 +93,9 @@ ___
 ## Changelog
 Read below for complete changelog history.
 
+### 31/10/2021
+- Fixed typo in stringtable.
+
 ### 26/10/2021
 - Removed delay before ZEN module initialisation so modules should appear in Zeus instantly now.
 - Cleaned up ZEN related functions to be more consistent with other TTS scripts.

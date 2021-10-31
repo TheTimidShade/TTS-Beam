@@ -111,7 +111,7 @@
                     <Original>Number of strikes</Original>
                     <English>Number of strikes</English>
                 </Key>
-                <Key ID="STR_tts_beam_moduleOrbitalBombardment_radius_desc">
+                <Key ID="STR_tts_beam_moduleOrbitalBombardment_strikeCount_desc">
                     <Original>The number of times the laser is fired for this bombardment</Original>
                     <English>The number of times the laser is fired for this bombardment</English>
                 </Key>
