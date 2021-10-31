@@ -37,6 +37,10 @@
                     <Original>Green</Original>
                     <English>Green</English>
                 </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_beamColour_blue">
+                    <Original>Blue</Original>
+                    <English>Blue</English>
+                </Key>
                 <Key ID="STR_tts_beam_moduleBeamStrike_beamColour_cyan">
                     <Original>Cyan</Original>
                     <English>Cyan</English>
@@ -80,6 +84,52 @@
                 <Key ID="STR_tts_beam_moduleBeamStrike_disableBeamDamage_desc">
                     <Original>If checked, beam will not damage units or destroy objects</Original>
                     <English>If checked, beam will not damage units or destroy objects</English>
+                </Key>
+            </Container>
+        </Container>
+        <Container name="Orbital Bombardment Module">	
+            <Key ID="STR_tts_beam_moduleOrbitalBombardment_title">
+				<Original>Orbital Bombardment</Original>
+				<English>Orbital Bombardment</English>
+			</Key>
+            <Key ID="STR_tts_beam_moduleOrbitalBombardment_desc">
+				<Original>For when one laser strike isn't enough</Original>
+				<English>For when one laser strike isn't enough</English>
+			</Key>
+            <Container name="Orbital bombardment radius">
+                <Key ID="STR_tts_beam_moduleOrbitalBombardment_radius">
+                    <Original>Bombardment radius</Original>
+                    <English>Bombardment radius</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleOrbitalBombardment_radius_desc">
+                    <Original>Maximum distance laser strikes can land from the module's position</Original>
+                    <English>Maximum distance laser strikes can land from the module's position</English>
+                </Key>
+            </Container>
+            <Container name="Orbital bombardment rounds">
+                <Key ID="STR_tts_beam_moduleOrbitalBombardment_strikeCount">
+                    <Original>Number of strikes</Original>
+                    <English>Number of strikes</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleOrbitalBombardment_strikeCount_desc">
+                    <Original>The number of times the laser is fired for this bombardment</Original>
+                    <English>The number of times the laser is fired for this bombardment</English>
+                </Key>
+            </Container>
+            <Container name="Orbital bombardment shot delay">
+                <Key ID="STR_tts_beam_moduleOrbitalBombardment_shotDelay">
+                    <Original>Time between strikes</Original>
+                    <English>Time between strikes</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleOrbitalBombardment_shotDelay_desc">
+                    <Original>Delay between each strike in seconds</Original>
+                    <English>Delay between each strike in seconds</English>
+                </Key>
+            </Container>
+            <Container name="Orbital bombardment rainbow">
+                <Key ID="STR_tts_beam_moduleOrbitalBombardment_rainbow">
+                    <Original>Rainbow mode</Original>
+                    <English>Rainbow mode</English>
                 </Key>
             </Container>
         </Container>
