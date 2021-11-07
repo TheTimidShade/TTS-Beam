@@ -20,8 +20,8 @@ params [
 ];
 
 if (_activated) then {
-	private _beamColour = parseSimpleArray (_module getVariable ["BeamColour", [1,0.6,0.2]]);
-	private _debrisColour = parseSimpleArray (_module getVariable ["DebrisColour", [0.3, 0.27, 0.15]]);
+	private _beamColour = parseSimpleArray (_module getVariable ["BeamColour", "[1,0.6,0.2]"]);
+	private _debrisColour = parseSimpleArray (_module getVariable ["DebrisColour", "[0.3, 0.27, 0.15]"]);
 	private _isLethal = !(_module getVariable ["BeamDamage", false]);
 
 	[_module, _beamColour, _debrisColour, _isLethal] spawn tts_beam_fnc_beam;

@@ -22,8 +22,8 @@ params [
 if (!isServer) exitWith {};
 
 if (_activated) then {
-	private _beamColour = parseSimpleArray (_module getVariable ["BeamColour", [1,0.6,0.2]]);
-	private _debrisColour = parseSimpleArray (_module getVariable ["DebrisColour", [0.3, 0.27, 0.15]]);
+	private _beamColour = parseSimpleArray (_module getVariable ["BeamColour", "[1,0.6,0.2]"]);
+	private _debrisColour = parseSimpleArray (_module getVariable ["DebrisColour", "[0.3, 0.27, 0.15]"]);
 	private _isLethal = !(_module getVariable ["BeamDamage", false]);
 	private _bombardmentRadius = _module getVariable ["BombardmentRadius", 200];
 	private _strikeCount = _module getVariable ["StrikeCount", 5];

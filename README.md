@@ -1,6 +1,9 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 07/11/2021
+- Fixed default settings for modules having incorrect types. Beam Strike and Orbital Bombardment modules should not cause errors when using default settings anymore.
+
 ### 14/10/2021
 Applied changes from script version:
 - Removed delay before ZEN module initialisation so modules should appear in Zeus instantly now.

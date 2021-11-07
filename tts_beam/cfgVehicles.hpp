@@ -41,19 +41,22 @@ class CfgVehicles {
 				property = "tts_beam_moduleBeamStrike_BeamColour";
 				displayName = "$STR_tts_beam_moduleBeamStrike_beamColour";
 				tooltip = "$STR_tts_beam_moduleBeamStrike_beamColour_desc";
-				defaultValue = "[1,0.6,0.2]";
+				typeName = "STRING";
+				defaultValue = """[1,0.6,0.2]""";
 			};
 			class DebrisColour : Edit {
 				property = "tts_beam_moduleBeamStrike_DebrisColour";
 				displayName = "$STR_tts_beam_moduleBeamStrike_debrisColour";
 				tooltip = "$STR_tts_beam_moduleBeamStrike_debrisColour_desc";
-				defaultValue = "[0.3, 0.27, 0.15]";
+				typeName = "STRING";
+				defaultValue = """[0.3, 0.27, 0.15]""";
 			};
 			class BeamDamage : Checkbox {
 				property = "tts_beam_moduleBeamStrike_BeamDamage";
 				displayName = "$STR_tts_beam_moduleBeamStrike_disableBeamDamage";
 				tooltip = "$STR_tts_beam_moduleBeamStrike_disableBeamDamage_desc";
-				defaultValue = "0";
+				typeName = "BOOL";
+				defaultValue = "false";
 			};
 		};
 	};
@@ -71,22 +74,25 @@ class CfgVehicles {
 		
 		class Attributes : AttributesBase {
 			class BeamColour : Edit {
-				property = "tts_beam_moduleBeamStrike_BeamColour";
+				property = "tts_beam_moduleOrbitalBombardment_BeamColour";
 				displayName = "$STR_tts_beam_moduleBeamStrike_beamColour";
 				tooltip = "$STR_tts_beam_moduleBeamStrike_beamColour_desc";
-				defaultValue = "[1,0.6,0.2]";
+				typeName = "STRING";
+				defaultValue = """[1,0.6,0.2]""";
 			};
 			class DebrisColour : Edit {
-				property = "tts_beam_moduleBeamStrike_DebrisColour";
+				property = "tts_beam_moduleOrbitalBombardment_DebrisColour";
 				displayName = "$STR_tts_beam_moduleBeamStrike_debrisColour";
 				tooltip = "$STR_tts_beam_moduleBeamStrike_debrisColour_desc";
-				defaultValue = "[0.3, 0.27, 0.15]";
+				typeName = "STRING";
+				defaultValue = """[0.3, 0.27, 0.15]""";
 			};
 			class BeamDamage : Checkbox {
 				property = "tts_beam_moduleOrbitalBombardment_BeamDamage";
 				displayName = "$STR_tts_beam_moduleBeamStrike_disableBeamDamage";
 				tooltip = "$STR_tts_beam_moduleBeamStrike_disableBeamDamage_desc";
-				defaultValue = "0";
+				typeName = "BOOL";
+				defaultValue = "false";
 			};
 			class BombardmentRadius : Edit {
 				property = "tts_beam_moduleOrbitalBombardment_BombardmentRadius";
@@ -114,7 +120,7 @@ class CfgVehicles {
 				displayName = "$STR_tts_beam_moduleBeamStrike_disableBeamDamage";
 				tooltip = "$STR_tts_beam_moduleBeamStrike_disableBeamDamage_desc";
 				typeName = "BOOL";
-				defaultValue = "0";
+				defaultValue = "false";
 			};
 		};
 	};
