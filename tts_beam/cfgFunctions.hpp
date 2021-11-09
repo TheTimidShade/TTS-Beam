@@ -3,6 +3,7 @@ class tts_beam
 	class beam
 	{
 		file = "\tts_beam\functions";
+		class init { postInit = 1; };
 		class beam {};
 		class orbitalBombardment {};
 		class rayParticles {};
@@ -14,7 +15,7 @@ class tts_beam
 	class zen
 	{
 		file = "\tts_beam\functions\zen";
-		class initCustomModules { preInit = 1; };
+		class initCustomModules {};
 		class zen_moduleBeamStrike {};
 		class zen_moduleOrbitalBombardment {};
 	};

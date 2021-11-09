@@ -1,6 +1,10 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 09/11/2021
+- Cleaned up ZEN functions a bit.
+- Redid support for TTS Effects AIO so it should work as intended now.
+
 ### 07/11/2021
 - Fixed default settings for modules having incorrect types. Beam Strike and Orbital Bombardment modules should not cause errors when using default settings anymore.
 
