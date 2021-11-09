@@ -93,6 +93,9 @@ ___
 ## Changelog
 Read below for complete changelog history.
 
+### 09/11/2021
+- Cleaned up ZEN functions a bit.
+
 ### 31/10/2021
 - Fixed typo in stringtable.
 
