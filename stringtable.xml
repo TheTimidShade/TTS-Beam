@@ -132,6 +132,16 @@
                     <English>Rainbow mode</English>
                 </Key>
             </Container>
+            <Container name="Orbital bombardment stop param">
+                <Key ID="STR_tts_beam_moduleOrbitalBombardment_stopBombardment">
+                    <Original>Stop ongoing bombardment</Original>
+                    <English>Stop ongoing bombardment</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleOrbitalBombardment_stopBombardment_desc">
+                    <Original>If this is checked, instead of starting a new orbital bombardment any existing bombardments will be aborted\nThe other parameters will be ignored</Original>
+                    <English>If this is checked, instead of starting a new orbital bombardment any existing bombardments will be aborted\nThe other parameters will be ignored</English>
+                </Key>
+            </Container>
         </Container>
 	</Package>
 </Project>
