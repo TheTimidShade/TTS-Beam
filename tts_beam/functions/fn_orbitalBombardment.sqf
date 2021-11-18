@@ -35,6 +35,7 @@ if (count _beamColour < 3) then {_beamColour = [1,0.6,0.2]; systemChat "Invalid 
 if (count _debrisColour < 3) then {_debrisColour = [0.3, 0.27, 0.15]; systemChat "Invalid colour given for beam debris, default used instead";};
 if (_radius < 0) then {_radius = 0;};
 if (_strikeCount <= 0) then {_strikeCount = 1;};
+if (_shotDelay < 0.1) then {_shotDelay = 0.1};
 
 private _rainbowColours = [
 	[0.5,0,0],
@@ -49,11 +50,12 @@ private _rainbowColours = [
 private _rainbowIndex = 0;
 
 private ["_colour", "_rad", "_dir", "_pos", "_target"];
-private _cleanup = [];
 
 for "_i" from 1 to _strikeCount do
 {
-	private _colour = [];
+	if (missionNamespace getVariable ["tts_beam_stopOrbitalBombardment", false]) then {break;};
+
+	_colour = [];
 	if (_rainbow) then {
 		_colour = _rainbowColours#_rainbowIndex;
 		_rainbowIndex = (_rainbowIndex + 1) % 8;
@@ -67,13 +69,10 @@ for "_i" from 1 to _strikeCount do
 	_target = "Land_HelipadEmpty_F" createVehicle [0,0,0];
 	_target setPos _pos;
 	
-	_cleanup pushBack _target;
+	_target spawn {sleep 15; deleteVehicle _this;};
 
 	[_target, _colour, _debrisColour, _isLethal] remoteExec ["tts_beam_fnc_beam", 0, false];
 
 	sleep _shotDelay;
 };
-
-sleep 10;
-
-{deleteVehicle _x;} forEach _cleanup;
+tts_beam_stopOrbitalBombardment = false; publicVariable "tts_beam_stopOrbitalBombardment";

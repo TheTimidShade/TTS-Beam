@@ -52,11 +52,22 @@
 				[ // control args
 					false // default state
 				]
+			],
+			["CHECKBOX", ["STR_tts_beam_moduleOrbitalBombardment_stopBombardment", "STR_tts_beam_moduleOrbitalBombardment_stopBombardment_desc"],
+				[ // control args
+					false // default state
+				],
+				true
 			]
 		],
 		{ // code run on dialog closed (only run if OK is clicked)
 			params ["_dialogResult", "_args"];
 			
+			if (_dialogResult#7) exitWith {
+				tts_beam_stopOrbitalBombardment = true;
+				publicVariable "tts_beam_stopOrbitalBombardment";
+			};
+
 			private _beamColour = _dialogResult#0;
 			switch (_dialogResult#0) do { // select beam colour
 				case "Default": {_beamColour = [1,0.6,0.2];}; 	// default
