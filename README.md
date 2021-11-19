@@ -1,59 +1,52 @@
-# TTS Beam Laser Script
-Beam Laser script for Arma 3, which calls down a laser strike on the desired object/position.
+# TTS Beam Laser
+This is a beam laser effect I created for one of my missions. The beam particle effect is based on [ALIAS's gravity script](https://steamcommunity.com/sharedfiles/filedetails/?id=884555116) which you should check out if you like the look of this script. When activated, a beam laser will come from the sky above the target position and obliterate most objects beneath it. The damage/destruction can be disabled if you just want to use the effect.
 
-A [mod version](https://steamcommunity.com/sharedfiles/filedetails/?id=2393517275) is also available on the Steam Workshop.
+You can see the script in action in this [demo video](https://www.youtube.com/watch?v=OPNlwLIzreI) or if you'd like to test the script for yourself you can try out the [demo mission](https://steamcommunity.com/sharedfiles/filedetails/?id=2373483475).
 
-### **FEATURES:**
+This is the script version, a [mod version](https://steamcommunity.com/sharedfiles/filedetails/?id=2393517275) is also available on the Steam Workshop.
+
+### **Features:**
 - Customisable beam/debris colour
 - Damages/destroys nearby units, vehicles and buildings
 - Nearby units can be knocked down by the blast wave
 - ACE compatibility
 - Designed for multiplayer and tested on dedicated server
-- Compatible with Zeus Enhanced
+- Useable from Zeus via [Zeus Enhanced](https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631)
 - Editor module to simplify usage (**Mod version only!**)
 
-[Zeus Enhanced](https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631) is required to use the module from Zeus.
+**ZEN Modules**:
+- Beam Laser Strike
+- Orbital Bombardment
 
-You can see the script in action in this [demo video](https://www.youtube.com/watch?v=OPNlwLIzreI) or try out the [demo mission](https://steamcommunity.com/sharedfiles/filedetails/?id=2373483475) yourself.
+**Editor Modules (MOD VERSION ONLY):**
+- Beam Laser Strike
+- Orbital Bombardment
 
-___
-
-### **INTALLATION INSTRUCTIONS:**
-1. Download the script files via the green 'Code' button in the top right. Extract the ZIP file somewhere easily accessible.
-2. Open your mission folder. You can do this from the 3den Editor using (Scenario > Open Scenario Folder).
-3. Copy the 'scripts' folder into your mission folder.
-4. If you do not already have a `description.ext` file in your mission, copy it into your mission folder. If you already have one, copy the contents of my `description.ext` into yours. Any 'CfgSomething' classes need to be merged together into one.
-e.g.
-```cpp
-// from TTS Cloak
-class CfgFunctions
-{
-    #include "scripts\tts_cloak\cfgFunctions.hpp"
-}
-```
-and
-```cpp
-// from TTS Beam Laser
-class CfgFunctions
-{
-    #include "scripts\tts_beam\cfgFunctions.hpp"
-}
-```
-should become
-```cpp
-// what CfgFunctions should look like when using both
-class CfgFunctions
-{
-    #include "scripts\tts_cloak\cfgFunctions.hpp"
-    #include "scripts\tts_beam\cfgFunctions.hpp"
-}
-```
-5. If you do not already have a `stringtable.xml` file in your mission, copy it into your mission folder. If you already have one, copy everything EXCEPT THE FIRST LINE from my `stringtable.xml` into yours.
-6. Done! You can now trigger a beam strike using `tts_beam_fnc_beam` with the object you want the strike to land on as the first parameter (see below for examples). If you would rather use Zeus Enhanced, you can use the Zeus module instead.
+**For help with troubleshooting, questions or feedback, join my [Discord](https://discord.gg/8Y2ENWQMpK)**
 
 ___
 
-### **EXAMPLES:**  
+### **More information:**
+- [Script version install instructions](https://github.com/TheTimidShade/Timid-Beam/wiki/Script-version-install-instructions)
+- [Function documentation](https://github.com/TheTimidShade/Timid-Beam/wiki/Function-documentation)
+
+### **License:**
+This script is licensed under [Arma Public License No Derivatives (APL-ND)](https://www.bohemia.net/community/licenses/arma-public-license-nd). You can freely use the script in your missions, private or uploaded to the Steam Workshop but you must not use any parts of the script in another mod without my permission.
+
+### **Supported Languages:**
+- English  
+
+If you'd like to translate the script into a different language, contact me via my Discord or create a pull request.
+
+### **Credits:**
+- ALIAScartoons for the Gravity script, which this script is based off. You can find a collection of his scripts [here](https://steamcommunity.com/workshop/filedetails/?id=1123074587). 
+- Killzone_Kid for the forced ragdoll function which this script makes use of. 
+- Fess from the [Tiberian Genesis](https://steamcommunity.com/sharedfiles/filedetails/?id=2336555877) mod team, who generously provided me with most of the config required to make this mod work.
+- Unwittingrabbit and AlphaAmpersandOmega for the suggestion to allow usage from Zeus.
+
+___
+
+### **Examples:**  
 `tts_beam_fnc_beam` **needs to be executed on all connected clients AND the server to work correctly in multiplayer.** You can do this using triggers or via remoteExec.  
 
 Trigger example (trigger must NOT be server only):
