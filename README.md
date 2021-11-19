@@ -59,8 +59,7 @@ if (isServer) then {
 For extra destruction, you can also create a barrage of beam strikes:
 ```sqf
 // the orbital bombardment should only be triggered from the server
-if (isServer) then 
-{
+if (isServer) then {
     [getPos beamTarget, [1,0.6,0.2], [0.3,0.27,0.15], true, 200, 5, 1, false] spawn tts_beam_fnc_orbitalBombardment; 
 };
 ```
