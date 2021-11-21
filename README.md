@@ -1,6 +1,16 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 21/11/2021
+Applied changes from script version:
+- Converted tabs to spaces.
+- Added colour picker to 'Beam Laser Strike' and 'Orbital Bombardment' ZEN modules.
+
+Mod version specific changes:
+- Added colour presets to 'Beam laser Strike' and 'Orbital Bombardment' editor modules.
+- Changed 'Beam Laser Strike' module to server only and used remoteExec instead in order to prevent beam laser triggering late for JIP players.
+- Fixed 'Rainbow mode' parameter for 'Orbital Bombardment' editor module using name and description of 'Disable beam damage' parameter.
+
 ### 18/11/2021
 Applied changes from script version:
 - The orbital bombardment is now limited to a maximum of 10 strikes per second. Delays shorter than 0.1s will be increased to 0.1s.

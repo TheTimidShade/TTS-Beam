@@ -1,24 +1,24 @@
 /*
-	Author: TheTimidShade
+    Author: TheTimidShade
 
-	Description:
-		Creates laser beam on the given position. Should be executed on all connected clients and server using remoteExec.
+    Description:
+        Creates laser beam on the given position. Should be executed on all connected clients and server using remoteExec.
 
-	Parameters:
-		0: OBJECT - The object the beam is created above.
-		1: ARRAY (OPTIONAL) - Colour of the beam in format [r,g,b].
-		2: ARRAY (OPTIONAL) - Colour of dust created on impact in format [r,g,b].
-		3: BOOL (OPTIONAL) - False to disable damage and destruction of beam.
-		
-	Returns:
-		NONE
+    Parameters:
+        0: OBJECT - The object the beam is created above.
+        1: ARRAY (OPTIONAL) - Colour of the beam in format [r,g,b].
+        2: ARRAY (OPTIONAL) - Colour of dust created on impact in format [r,g,b].
+        3: BOOL (OPTIONAL) - False to disable damage and destruction of beam.
+        
+    Returns:
+        NONE
 */
 
 params [
-	["_target", objNull, [objNull]],
-	["_beamColour", [1,0.6,0.2], [[]]],
-	["_debrisColour", [0.3, 0.27, 0.15], [[]]],
-	["_isLethal", true, [true]]
+    ["_target", objNull, [objNull]],
+    ["_beamColour", [1,0.6,0.2], [[]]],
+    ["_debrisColour", [0.3, 0.27, 0.15], [[]]],
+    ["_isLethal", true, [true]]
 ];
 
 // input validation

@@ -3,9 +3,9 @@
 #include "cfgVehicles.hpp"
 
 class CfgFunctions {
-	#include "cfgFunctions.hpp"
+    #include "cfgFunctions.hpp"
 }
 
 class CfgSounds {	
-	#include "cfgSounds.hpp"
+    #include "cfgSounds.hpp"
 }

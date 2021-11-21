@@ -1,15 +1,15 @@
 /*
-	Author: TheTimidShade
+    Author: TheTimidShade
 
-	Description:
-		Creates dust cloud particles and rock debris for beam impact.
+    Description:
+        Creates dust cloud particles and rock debris for beam impact.
 
-	Parameters:
-		0: OBJECT - The object the beam is created above.
-		1: ARRAY - Colour of dust/rock debris created on impact in format [r,g,b].
+    Parameters:
+        0: OBJECT - The object the beam is created above.
+        1: ARRAY - Colour of dust/rock debris created on impact in format [r,g,b].
 
-	Returns:
-		NONE
+    Returns:
+        NONE
 */
 
 if (!hasInterface) exitWith {}; // dedicated server & HC should not run particles

@@ -1,16 +1,16 @@
 /*
-	Author: TheTimidShade
+    Author: TheTimidShade
 
-	Description:
-		Creates particles for main laser beam. Executed internally from tts_beam_fnc_beam.
+    Description:
+        Creates particles for main laser beam. Executed internally from tts_beam_fnc_beam.
 
-	Parameters:
-		0: OBJECT - Beam emitter object passed from fnc_beam.
-		1: ARRAY - Colour of laser passed from fnc_beam.
-		2: ARRAY - Position of target object passed from fnc_beam.
-		
-	Returns:
-		NONE
+    Parameters:
+        0: OBJECT - Beam emitter object passed from fnc_beam.
+        1: ARRAY - Colour of laser passed from fnc_beam.
+        2: ARRAY - Position of target object passed from fnc_beam.
+        
+    Returns:
+        NONE
 */
 
 params ["_beamEmitter", "_col", "_targetPos"];
