@@ -6,12 +6,12 @@
             <English>Default</English>
         </Key>
     </Package >
-	<Package name="Modules">
-		<Container name="Beam Strike Module">	
+    <Package name="Modules">
+        <Container name="Beam Strike Module">	
             <Key ID="STR_tts_beam_moduleBeamStrike_title">
-				<Original>Beam Laser Strike</Original>
-				<English>Beam Laser Strike</English>
-			</Key>
+                <Original>Beam Laser Strike</Original>
+                <English>Beam Laser Strike</English>
+            </Key>
             <Container name="Beam colour param">
                 <Key ID="STR_tts_beam_moduleBeamStrike_beamColour">
                     <Original>Beam colour</Original>
@@ -20,6 +20,18 @@
                 <Key ID="STR_tts_beam_moduleBeamStrike_beamColour_desc">
                     <Original>Colour of laser beam</Original>
                     <English>Colour of laser beam</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_customBeamColour">
+                    <Original>Custom beam colour</Original>
+                    <English>Custom beam colour</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_customBeamColour_desc">
+                    <Original>Colour used when 'Custom' is selected for the beam colour</Original>
+                    <English>Colour used when 'Custom' is selected for the beam colour</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_beamColour_custom">
+                    <Original>Custom</Original>
+                    <English>Custom</English>
                 </Key>
                 <Key ID="STR_tts_beam_moduleBeamStrike_beamColour_red">
                     <Original>Red</Original>
@@ -63,6 +75,14 @@
                     <Original>Colour of dust kicked up by explosion</Original>
                     <English>Colour of dust kicked up by explosion</English>
                 </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_customDebrisColour">
+                    <Original>Custom debris colour</Original>
+                    <English>Custom debris colour</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_customDebrisColour_desc">
+                    <Original>Colour used when 'Custom' is selected for the beam colour</Original>
+                    <English>Colour used when 'Custom' is selected for the beam colour</English>
+                </Key>
                 <Key ID="STR_tts_beam_moduleBeamStrike_debrisColour_mud">
                     <Original>Mud</Original>
                     <English>Mud</English>
@@ -89,13 +109,13 @@
         </Container>
         <Container name="Orbital Bombardment Module">	
             <Key ID="STR_tts_beam_moduleOrbitalBombardment_title">
-				<Original>Orbital Bombardment</Original>
-				<English>Orbital Bombardment</English>
-			</Key>
+                <Original>Orbital Bombardment</Original>
+                <English>Orbital Bombardment</English>
+            </Key>
             <Key ID="STR_tts_beam_moduleOrbitalBombardment_desc">
-				<Original>For when one laser strike isn't enough</Original>
-				<English>For when one laser strike isn't enough</English>
-			</Key>
+                <Original>For when one laser strike isn't enough</Original>
+                <English>For when one laser strike isn't enough</English>
+            </Key>
             <Container name="Orbital bombardment radius">
                 <Key ID="STR_tts_beam_moduleOrbitalBombardment_radius">
                     <Original>Bombardment radius</Original>
@@ -143,5 +163,5 @@
                 </Key>
             </Container>
         </Container>
-	</Package>
+    </Package>
 </Project>

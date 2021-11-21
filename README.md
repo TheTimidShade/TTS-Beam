@@ -74,6 +74,10 @@ ___
 ## Changelog
 Read below for complete changelog history.
 
+### 21/11/2021
+- Converted tabs to spaces.
+- Added colour picker to 'Beam Laser Strike' and 'Orbital Bombardment' ZEN modules.
+
 ### 18/11/2021
 - The orbital bombardment is now limited to a maximum of 10 strikes per second. Delays shorter than 0.1s will be increased to 0.1s.
 - Cleanup for orbital bombardment is now done individually for each strike instead of all at once at the end of the bombardment.

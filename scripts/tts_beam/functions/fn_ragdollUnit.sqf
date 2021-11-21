@@ -1,14 +1,14 @@
 /*
-	Author: Killzone_Kid
+    Author: Killzone_Kid
 
-	Description:
-		Forces the unit into ragdoll. Should be executed where unit is local.
+    Description:
+        Forces the unit into ragdoll. Should be executed where unit is local.
 
-	Parameters:
-		0: OBJECT - Unit being forced into ragdoll.
-		
-	Returns:
-		NONE
+    Parameters:
+        0: OBJECT - Unit being forced into ragdoll.
+        
+    Returns:
+        NONE
 */
 
 params ["_unit"];
@@ -22,6 +22,6 @@ _rag setVelocity [0,0,6];
 _unit allowDamage false;
 detach _rag;
 [_rag, _unit] spawn {
-	deleteVehicle (_this#0);
-	(_this#1) allowDamage true;
+    deleteVehicle (_this#0);
+    (_this#1) allowDamage true;
 };

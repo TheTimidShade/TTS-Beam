@@ -1,9 +1,9 @@
 class CfgFunctions
 {
-	#include "scripts\tts_beam\cfgFunctions.hpp"
+    #include "scripts\tts_beam\cfgFunctions.hpp"
 };
 
 class CfgSounds {
-	sounds[] = {};
-	#include "scripts\tts_beam\cfgSounds.hpp"
+    sounds[] = {};
+    #include "scripts\tts_beam\cfgSounds.hpp"
 };
