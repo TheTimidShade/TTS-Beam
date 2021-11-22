@@ -74,6 +74,9 @@ ___
 ## Changelog
 Read below for complete changelog history.
 
+### 22/11/2021
+- Fixed typo in stringtable.
+
 ### 21/11/2021
 - Converted tabs to spaces.
 - Added colour picker to 'Beam Laser Strike' and 'Orbital Bombardment' ZEN modules.

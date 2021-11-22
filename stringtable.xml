@@ -80,8 +80,8 @@
                     <English>Custom debris colour</English>
                 </Key>
                 <Key ID="STR_tts_beam_moduleBeamStrike_customDebrisColour_desc">
-                    <Original>Colour used when 'Custom' is selected for the beam colour</Original>
-                    <English>Colour used when 'Custom' is selected for the beam colour</English>
+                    <Original>Colour used when 'Custom' is selected for the debris colour</Original>
+                    <English>Colour used when 'Custom' is selected for the debris colour</English>
                 </Key>
                 <Key ID="STR_tts_beam_moduleBeamStrike_debrisColour_mud">
                     <Original>Mud</Original>
