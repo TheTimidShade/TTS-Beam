@@ -74,6 +74,9 @@ ___
 ## Changelog
 Read below for complete changelog history.
 
+### 24/11/2021
+- Fixed 'Disable beam damage' parameter for ZEN modules enabling damage instead of disabling it.
+
 ### 22/11/2021
 - Fixed typo in stringtable.
 
