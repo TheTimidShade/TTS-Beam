@@ -33,7 +33,7 @@
         ],
         { // code run on dialog closed (only run if OK is clicked)
             params ["_dialogResult", "_args"];
-            _dialogResult params ["_beamColourPreset", "_customBeamColour", "_debrisColourPreset", "_customDebrisColour", "_isLethal"];
+            _dialogResult params ["_beamColourPreset", "_customBeamColour", "_debrisColourPreset", "_customDebrisColour", "_disableDamage"];
             _args params ["_position"];
 
             private _beamColour = [];
@@ -52,7 +52,7 @@
 
             private _beamTarget = "Land_HelipadEmpty_F" createVehicle _position;
 
-            [_beamTarget, _beamColour, _debrisColour, _isLethal] remoteExec ["tts_beam_fnc_beam", 0, false]; // fire beam
+            [_beamTarget, _beamColour, _debrisColour, !_disableDamage] remoteExec ["tts_beam_fnc_beam", 0, false]; // fire beam
 
             _beamTarget spawn {sleep 60; deleteVehicle _this;}; // wait and cleanup target pos
         }, {}, [_position] // args

@@ -1,6 +1,10 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 24/11/2021
+Applied changes from script version:
+- Fixed 'Disable beam damage' parameter for ZEN modules enabling damage instead of disabling it.
+
 ### 21/11/2021
 Applied changes from script version:
 - Converted tabs to spaces.
