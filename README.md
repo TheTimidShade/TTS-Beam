@@ -5,6 +5,8 @@ You can see the script in action in this [demo video](https://www.youtube.com/wa
 
 This is the script version, a [mod version](https://steamcommunity.com/sharedfiles/filedetails/?id=2393517275) is also available on the Steam Workshop.
 
+### *This script requires CBA_A3*
+
 ### **Features:**
 - Customisable beam/debris colour
 - Damages/destroys nearby units, vehicles and buildings
@@ -73,6 +75,28 @@ ___
 
 ## Changelog
 Read below for complete changelog history.
+
+### 22/02/2022
+New features:
+- Added lethal radius and damage radius parameters to `fn_beam`.
+- Added 'Lethal radius' and 'Damage radius' sliders to 'Beam Laser Strike' and 'Orbital Bombardment' ZEN modules.
+- Infantry units within the lethal radius of the laser will now be vaporised.
+- Structures within the lethal radius of the laser now have a chance to catch fire.
+- A crater is created when the beam impacts terrain.
+- Implemented CBA settings support. The script now requires CBA.
+- Added various CBA settings to customise/disable newly added features.
+
+Effect tweaks:
+- Destroyed objects within the lethal radius no longer have damage effects to prevent large lag spikes when destroying lots of buildings.
+- Added a shockwave particle on beam impact.
+- Camera shake is now applied up to 2km away and lowers in intensity the further away the player is.
+- The bright flash on beam impact is now only shown when the player is within 2km and looking towards the impact point.
+- Camera shake, flash and blur effects are no longer shown in spectator mode or while using the Zeus interface.
+- Explosion particles are now created from the laser impact point instead of the terrain beneath it.
+
+Misc:
+- The script now checks for 'ace_medical' rather than 'ace_main' so it should work for versions of ACE that have medical functions removed.
+- Fixed a bug where the laser could sometimes get deflected in strange directions when bouncing off buildings.
 
 ### 24/11/2021
 - Fixed 'Disable beam damage' parameter for ZEN modules enabling damage instead of disabling it.

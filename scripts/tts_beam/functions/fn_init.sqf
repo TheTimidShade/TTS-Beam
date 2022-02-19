@@ -11,6 +11,8 @@
         NONE
 */
 
+tts_beam_aceEnabled = isClass(configFile >> "CfgPatches" >> "ace_medical");
+
 if (isClass(configFile >> "CfgPatches" >> "tts_effects_aio")) exitWith {};
 
 [] call tts_beam_fnc_initCustomModules;

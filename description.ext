@@ -7,3 +7,9 @@ class CfgSounds {
     sounds[] = {};
     #include "scripts\tts_beam\cfgSounds.hpp"
 };
+
+class Extended_PreInit_EventHandlers {
+	class tts_beam_CBA_init {
+        init = "call compile preprocessFileLineNumbers 'scripts\tts_beam\functions\fn_CBASettings.sqf'";
+    };
+};
