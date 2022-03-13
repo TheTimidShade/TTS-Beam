@@ -27,6 +27,8 @@ if (_activated) then {
     private _debrisPreset = _module getVariable ["DebrisColourPreset", "Custom"];
     private _debrisColour = parseSimpleArray (_module getVariable ["DebrisColour", "[0.3, 0.27, 0.15]"]);
     private _isLethal = !(_module getVariable ["BeamDamage", false]);
+    private _lethalRadius = _module getVariable ["LethalRadius", 200];
+    private _damageRadius = _module getVariable ["DamageRadius", 400];
     private _bombardmentRadius = _module getVariable ["BombardmentRadius", 200];
     private _strikeCount = _module getVariable ["StrikeCount", 5];
     private _shotDelay = _module getVariable ["ShotDelay", 5];
@@ -40,5 +42,5 @@ if (_activated) then {
         _debrisColour = _debrisPreset call tts_beam_fnc_colourFromString;
     };
 
-    [getPos _module, _beamColour, _debrisColour, _isLethal, _bombardmentRadius, _strikeCount, _shotDelay, _rainbowMode] spawn tts_beam_fnc_orbitalBombardment;
+    [getPos _module, _beamColour, _debrisColour, _isLethal, _lethalRadius, _damageRadius, _bombardmentRadius, _strikeCount, _shotDelay, _rainbowMode] spawn tts_beam_fnc_orbitalBombardment;
 };

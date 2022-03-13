@@ -27,6 +27,8 @@ if (_activated) then {
     private _debrisPreset = _module getVariable ["DebrisColourPreset", "Custom"];
     private _debrisColour = parseSimpleArray (_module getVariable ["DebrisColour", "[0.3, 0.27, 0.15]"]);
     private _isLethal = !(_module getVariable ["BeamDamage", false]);
+    private _lethalRadius = _module getVariable ["LethalRadius", 200];
+    private _damageRadius = _module getVariable ["DamageRadius", 400];
 
     if (_beamPreset != "Custom") then {
         _beamColour = _beamPreset call tts_beam_fnc_colourFromString;
@@ -36,5 +38,5 @@ if (_activated) then {
         _debrisColour = _debrisPreset call tts_beam_fnc_colourFromString;
     };
 
-    [_module, _beamColour, _debrisColour, _isLethal] remoteExec ["tts_beam_fnc_beam", 0, false];
+    [_module, _beamColour, _debrisColour, _isLethal, _lethalRadius, _damageRadius] remoteExec ["tts_beam_fnc_beam", 0, false];
 };

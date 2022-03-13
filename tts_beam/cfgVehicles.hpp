@@ -91,6 +91,20 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = "false";
             };
+            class LethalRadius : Edit {
+                property = "tts_beam_moduleBeamStrike_LethalRadius";
+                displayName = "$STR_tts_beam_moduleBeamStrike_lethalRadius";
+                tooltip = "$STR_tts_beam_moduleBeamStrike_lethalRadius_desc";
+                typeName = "NUMBER";
+                defaultValue = "200";
+            };
+            class DamageRadius : Edit {
+                property = "tts_beam_moduleBeamStrike_DamageRadius";
+                displayName = "$STR_tts_beam_moduleBeamStrike_damageRadius";
+                tooltip = "$STR_tts_beam_moduleBeamStrike_damageRadius_desc";
+                typeName = "NUMBER";
+                defaultValue = "400";
+            };
         };
     };
 
@@ -160,6 +174,20 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = "false";
             };
+            class LethalRadius : Edit {
+                property = "tts_beam_moduleBeamStrike_LethalRadius";
+                displayName = "$STR_tts_beam_moduleBeamStrike_lethalRadius";
+                tooltip = "$STR_tts_beam_moduleBeamStrike_lethalRadius_desc";
+                typeName = "NUMBER";
+                defaultValue = "200";
+            };
+            class DamageRadius : Edit {
+                property = "tts_beam_moduleBeamStrike_DamageRadius";
+                displayName = "$STR_tts_beam_moduleBeamStrike_damageRadius";
+                tooltip = "$STR_tts_beam_moduleBeamStrike_damageRadius_desc";
+                typeName = "NUMBER";
+                defaultValue = "400";
+            };
             class BombardmentRadius : Edit {
                 property = "tts_beam_moduleOrbitalBombardment_BombardmentRadius";
                 displayName = "$STR_tts_beam_moduleOrbitalBombardment_radius";
@@ -191,4 +219,4 @@ class CfgVehicles {
         };
     };
     
-}
+};
