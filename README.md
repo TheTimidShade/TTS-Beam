@@ -76,7 +76,7 @@ ___
 ## Changelog
 Read below for complete changelog history.
 
-### 22/02/2022
+### 13/03/2022
 New features:
 - Added lethal radius and damage radius parameters to `fn_beam`.
 - Added 'Lethal radius' and 'Damage radius' sliders to 'Beam Laser Strike' and 'Orbital Bombardment' ZEN modules.
