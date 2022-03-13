@@ -23,6 +23,8 @@ params [
 	["_beamColour", [1,0.6,0.2], [[]]],
 	["_debrisColour", [0.3, 0.27, 0.15], [[]]],
 	["_isLethal", true, [true]],
+    ["_killRange", 200, [0]],
+    ["_maxDamageRange", 400, [0]],
 	["_radius", 200, [0]],
 	["_strikeCount", 5, [0]],
 	["_shotDelay", 5, [0]],
@@ -33,6 +35,8 @@ if (!isServer) exitWith {};
 
 if (count _beamColour < 3) then {_beamColour = [1,0.6,0.2]; systemChat "Invalid colour given for beam, default used instead";};
 if (count _debrisColour < 3) then {_debrisColour = [0.3, 0.27, 0.15]; systemChat "Invalid colour given for beam debris, default used instead";};
+if (_killRange < 1) then {_killRange = 1;};
+if (_maxDamageRange < _killRange) then {_maxDamageRange = _killRange;};
 if (_radius < 0) then {_radius = 0;};
 if (_strikeCount <= 0) then {_strikeCount = 1;};
 if (_shotDelay < 0.1) then {_shotDelay = 0.1};
@@ -71,7 +75,7 @@ for "_i" from 1 to _strikeCount do
 	
 	_target spawn {sleep 15; deleteVehicle _this;};
 
-	[_target, _colour, _debrisColour, _isLethal] remoteExec ["tts_beam_fnc_beam", 0, false];
+	[_target, _colour, _debrisColour, _isLethal, _killRange, _maxDamageRange] remoteExec ["tts_beam_fnc_beam", 0, false];
 
 	sleep _shotDelay;
 };
