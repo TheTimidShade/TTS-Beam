@@ -6,6 +6,112 @@
             <English>Default</English>
         </Key>
     </Package >
+    <Package name="Settings categories">
+        <Key ID="STR_tts_beam_settingsCat_misc">
+            <Original>Misc</Original>
+            <English>Misc</English>
+        </Key>
+        <Key ID="STR_tts_beam_settingsCat_effects">
+            <Original>Effects</Original>
+            <English>Effects</English>
+        </Key>
+        <Key ID="STR_tts_beam_settingsCat_cleanup">
+            <Original>Garbage Cleanup</Original>
+            <English>Garbage Cleanup</English>
+        </Key>
+    </Package >
+    <Package name="Settings">
+        <Container name="Vaporise bodies setting">
+            <Key ID="STR_tts_beam_settings_vaporiseBodies">
+                <Original>Vaporise bodies</Original>
+                <English>Vaporise bodies</English>
+            </Key>
+            <Key ID="STR_tts_beam_settings_vaporiseBodies_desc">
+                <Original>If enabled, infantry units inside the lethal radius of the laser will be vaporised</Original>
+                <English>If enabled, infantry units inside the lethal radius of the laser will be vaporised</English>
+            </Key>
+        </Container>
+        <Container name="Structure fires setting">
+            <Key ID="STR_tts_beam_settings_structureFiresEnabled">
+                <Original>Structure fires</Original>
+                <English>Structure fires</English>
+            </Key>
+            <Key ID="STR_tts_beam_settings_structureFiresEnabled_desc">
+                <Original>If enabled, structures inside the lethal radius of the laser will sometimes burn for a short amount of time</Original>
+                <English>If enabled, structures inside the lethal radius of the laser will sometimes burn for a short amount of time</English>
+            </Key>
+        </Container>
+        <Container name="Create craters setting">
+            <Key ID="STR_tts_beam_settings_createCraters">
+                <Original>Create craters</Original>
+                <English>Create craters</English>
+            </Key>
+            <Key ID="STR_tts_beam_settings_createCraters_desc">
+                <Original>If enabled, laser impacts will leave craters and scorch marks</Original>
+                <English>If enabled, laser impacts will leave craters and scorch marks</English>
+            </Key>
+        </Container>
+        <Container name="Structure fire chance setting">
+            <Key ID="STR_tts_beam_settings_structureFireChance">
+                <Original>Structure fire chance</Original>
+                <English>Structure fire chance</English>
+            </Key>
+            <Key ID="STR_tts_beam_settings_structureFireChance_desc">
+                <Original>The chance that a structure will catch fire when destroyed by the beam. Lots of fires can cause significant framerate drops</Original>
+                <English>The chance that a structure will catch fire when destroyed by the beam. Lots of fires can cause significant framerate drops</English>
+            </Key>
+        </Container>
+        <Container name="Structure fire duration min setting">
+            <Key ID="STR_tts_beam_settings_structureFireDurationMin">
+                <Original>Minimum structure fire duration</Original>
+                <English>Minimum structure fire duration</English>
+            </Key>
+            <Key ID="STR_tts_beam_settings_structureFireDurationMin_desc">
+                <Original>The minimum duration in seconds that fires started by the laser will burn for</Original>
+                <English>The minimum duration in seconds that fires started by the laser will burn for</English>
+            </Key>
+        </Container>
+        <Container name="Structure fire duration max setting">
+            <Key ID="STR_tts_beam_settings_structureFireDurationMax">
+                <Original>Maximum structure fire duration</Original>
+                <English>Maximum structure fire duration</English>
+            </Key>
+            <Key ID="STR_tts_beam_settings_structureFireDurationMax_desc">
+                <Original>The maximum duration in seconds that fires started by the laser will burn for</Original>
+                <English>The maximum duration in seconds that fires started by the laser will burn for</English>
+            </Key>
+        </Container>
+        <Container name="Cleanup skeletons setting">
+            <Key ID="STR_tts_beam_settings_cleanupSkeletons">
+                <Original>Cleanup skeletons</Original>
+                <English>Cleanup skeletons</English>
+            </Key>
+            <Key ID="STR_tts_beam_settings_cleanupSkeletons_desc">
+                <Original>If enabled, skeletons and scorch marks created when a unit is vaporised will be deleted after the cleanup timer runs out</Original>
+                <English>If enabled, skeletons and scorch marks created when a unit is vaporised will be deleted after the cleanup timer runs out</English>
+            </Key>
+        </Container>
+        <Container name="Cleanup skeletons delay setting">
+            <Key ID="STR_tts_beam_settings_cleanupSkeletonsDelay">
+                <Original>Skeleton cleanup delay</Original>
+                <English>Skeleton cleanup delay</English>
+            </Key>
+            <Key ID="STR_tts_beam_settings_cleanupSkeletonsDelay_desc">
+                <Original>Delay in seconds after a unit is vaporised before skeletons and scorch marks are deleted</Original>
+                <English>Delay in seconds after a unit is vaporised before skeletons and scorch marks are deleted</English>
+            </Key>
+        </Container>
+        <Container name="Disable impact flash setting">
+            <Key ID="STR_tts_beam_settings_disableImpactFlash">
+                <Original>Disable impact flash</Original>
+                <English>Disable impact flash</English>
+            </Key>
+            <Key ID="STR_tts_beam_settings_disableImpactFlash_desc">
+                <Original>Disables white flash effect on laser impact</Original>
+                <English>Disables white flash effect on laser impact</English>
+            </Key>
+        </Container>
+    </Package >
     <Package name="Modules">
         <Container name="Beam Strike Module">	
             <Key ID="STR_tts_beam_moduleBeamStrike_title">
@@ -104,6 +210,26 @@
                 <Key ID="STR_tts_beam_moduleBeamStrike_disableBeamDamage_desc">
                     <Original>If checked, beam will not damage units or destroy objects</Original>
                     <English>If checked, beam will not damage units or destroy objects</English>
+                </Key>
+            </Container>
+            <Container name="Lethal radius">
+                <Key ID="STR_tts_beam_moduleBeamStrike_lethalRadius">
+                    <Original>Lethal radius</Original>
+                    <English>Lethal radius</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_lethalRadius_desc">
+                    <Original>The maximum distance in metres from the impact point that units/objects will recieve lethal damage</Original>
+                    <English>The maximum distance in metres from the impact point that units/objects will recieve lethal damage</English>
+                </Key>
+            </Container>
+            <Container name="Damage radius">
+                <Key ID="STR_tts_beam_moduleBeamStrike_damageRadius">
+                    <Original>Damage radius</Original>
+                    <English>Damage radius</English>
+                </Key>
+                <Key ID="STR_tts_beam_moduleBeamStrike_damageRadius_desc">
+                    <Original>The maximum distance in metres from the impact point that units/objects will recieve damage</Original>
+                    <English>The maximum distance in metres from the impact point that units/objects will recieve damage</English>
                 </Key>
             </Container>
         </Container>

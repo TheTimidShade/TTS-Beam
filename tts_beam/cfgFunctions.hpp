@@ -12,6 +12,8 @@ class tts_beam
 		class explosionParticles {};
 		class postProcessEffects {};
 		class colourFromString {};
+		class vaporise {};
+		class smoulder {};
 	};
 	class zen
 	{

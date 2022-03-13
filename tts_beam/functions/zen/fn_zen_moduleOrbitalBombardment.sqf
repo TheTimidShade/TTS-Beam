@@ -30,6 +30,28 @@
                     false // default state
                 ]
             ],
+            ["SLIDER:RADIUS", ["STR_tts_beam_moduleBeamStrike_lethalRadius", "STR_tts_beam_moduleBeamStrike_lethalRadius_desc"],
+                [ // control args
+                    1, // min
+                    2000, // max
+                    200, // default
+                    0, // decimals
+                    _position, // radius center position
+                    [1, 0, 0, 0.5] // radius colour
+                ],
+                false
+            ],
+            ["SLIDER:RADIUS", ["STR_tts_beam_moduleBeamStrike_damageRadius", "STR_tts_beam_moduleBeamStrike_damageRadius_desc"],
+                [ // control args
+                    1, // min
+                    2000, // max
+                    400, // default
+                    0, // decimals
+                    _position, // radius center position
+                    [0, 1, 0, 0.5] // radius colour
+                ],
+                false
+            ],
             ["EDIT", ["STR_tts_beam_moduleOrbitalBombardment_radius", "STR_tts_beam_moduleOrbitalBombardment_radius_desc"],
                 [ // control args
                     "200", // default text
@@ -68,7 +90,7 @@
         ],
         { // code run on dialog closed (only run if OK is clicked)
             params ["_dialogResult", "_args"];
-            _dialogResult params ["_beamColourPreset", "_customBeamColour", "_debrisColourPreset", "_customDebrisColour", "_disableDamage", "_radius", "_strikeCount", "_shotDelay", "_rainbow", "_stopBombardment"];
+            _dialogResult params ["_beamColourPreset", "_customBeamColour", "_debrisColourPreset", "_customDebrisColour", "_disableDamage", "_lethalRadius", "_damageRadius", "_radius", "_strikeCount", "_shotDelay", "_rainbow", "_stopBombardment"];
             _args params ["_position"];
 
             if (_stopBombardment) exitWith {
@@ -94,7 +116,7 @@
                 _debrisColour = _debrisColourPreset call tts_beam_fnc_colourFromString;
             };
 
-            [_position, _beamColour, _debrisColour, !_disableDamage, _radius, _strikeCount, _shotDelay, _rainbow] remoteExec ["tts_beam_fnc_orbitalBombardment", 2, false];
+            [_position, _beamColour, _debrisColour, !_disableDamage, _lethalRadius, _damageRadius, _radius, _strikeCount, _shotDelay, _rainbow] remoteExec ["tts_beam_fnc_orbitalBombardment", 2, false];
 
         }, {}, [_position] // args
     ] call zen_dialog_fnc_create;

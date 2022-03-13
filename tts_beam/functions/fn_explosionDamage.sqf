@@ -13,15 +13,17 @@
         NONE
 */
 
+#define DAMAGE_BLACKLIST ["Land_HelipadEmpty_F", "Land_ShellCrater_02_extralarge_F", "Crater"]
+
 if (!isServer) exitWith {}; // make sure this function is only run on server
 
 params ["_impactEmitter","_maxKillRange", "_maxDamageRange"];
 
-private _ace_enabled = isClass(configFile >> "CfgPatches" >> "ace_main");
+private _ace_enabled = isClass(configFile >> "CfgPatches" >> "ace_medical");
 
-_nearObjects = nearestObjects[_impactEmitter, ["Building", "House", "Man", "LandVehicle", "Air"], _maxDamageRange];
+_nearObjects = nearestObjects[_impactEmitter, ["Building", "House", "CAManBase", "LandVehicle", "Air"], _maxDamageRange];
 {
-    if (typeOf _x == "Land_HelipadEmpty_F") then {continue}; // ignore helipads since we use those for sounds
+    if (typeOf _x in DAMAGE_BLACKLIST) then {continue}; // ignore objects that are in the blacklist
     
     private _distance = _impactEmitter distance _x;
     private _dirFromTo = (getPosATL _impactEmitter) vectorFromTo (getPosATL _x);
@@ -35,14 +37,16 @@ _nearObjects = nearestObjects[_impactEmitter, ["Building", "House", "Man", "Land
     private _throwSpeedDamage = [15*_dirFromTo#0, 15*_dirFromTo#1, 5] vectorMultiply _effectCoef;
 
     if (_distance <= _maxKillRange) then { // if unit is within the killzone, instantly destroy it
-        if (!(_x isKindOf "Static")) then {[_x, _throwSpeedKill] remoteExec ["setVelocity", _x, false];}; // throw non-static objects
-        [_x, _impactEmitter] spawn {sleep 0.001; if (_this#0 != _this#1) then {_this#0 setDamage 1};};
+        if (!(_x isKindOf "Static") && !(_x isKindOf "CAManBase")) then {[_x, _throwSpeedKill] remoteExec ["setVelocity", _x, false];}; // throw non-static objects
+
+        if (damage _x < 1) then {_x spawn tts_beam_fnc_vaporise;};
+
     } else { // if not, damage it depending on distance
         if (_distance <= _maxDamageRange) then {
             if (!(_x isKindOf "Static")) then {[_x, _throwSpeedDamage] remoteExec ["setVelocity", _x, false];}; // throw non-static objects
             
             private _damageToAdd = 0.5*(_effectCoef^2);
-            if (!(_x isKindOf "Man")) then { // damage vehicles/buildings
+            if (!(_x isKindOf "CAManBase")) then { // damage vehicles/buildings
                 _x setDamage ((damage _x) + _damageToAdd);
             } else { // damage unit
                 if (_ace_enabled) then { // check if ace is enabled, use ace damage if it is
