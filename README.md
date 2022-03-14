@@ -51,7 +51,7 @@ ___
 ### **Examples:**  
 `tts_beam_fnc_beam` **needs to be executed on all connected clients AND the server to work correctly in multiplayer.** You can do this using triggers or via remoteExec.  
 
-Trigger example (trigger must NOT be server only):
+Trigger example
 ```sqf
 if (isServer) then {
     [_beamTarget, [1,0.6,0.2], [0.3,0.27,0.15], true] remoteExec ["tts_beam_fnc_beam", 0, false];
