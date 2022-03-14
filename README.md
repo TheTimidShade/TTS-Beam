@@ -54,7 +54,7 @@ ___
 Trigger example
 ```sqf
 if (isServer) then {
-    [_beamTarget, [1,0.6,0.2], [0.3,0.27,0.15], true] remoteExec ["tts_beam_fnc_beam", 0, false];
+    [_beamTarget, [1,0.6,0.2], [0.3,0.27,0.15], true, 200, 400] remoteExec ["tts_beam_fnc_beam", 0, false];
 };
 ```
 
@@ -62,7 +62,7 @@ For extra destruction, you can also create a barrage of beam strikes:
 ```sqf
 // the orbital bombardment should only be triggered from the server
 if (isServer) then {
-    [getPos beamTarget, [1,0.6,0.2], [0.3,0.27,0.15], true, 200, 5, 1, false] spawn tts_beam_fnc_orbitalBombardment; 
+    [getPos beamTarget, [1,0.6,0.2], [0.3,0.27,0.15], true, 200, 400, 200, 5, 1, false] spawn tts_beam_fnc_orbitalBombardment; 
 };
 ```
 If necessary, the orbital bombardment can be aborted by setting the `tts_beam_stopOrbitalBombardment` variable to true:
